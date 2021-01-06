@@ -1,14 +1,14 @@
 python run_summarization.py \
 --mode=train \
 --num_gpus=2 \
---data_path=./data/small.bin \
---vocab_path=./data/vocab \
+--data_path=./data/arxiv_sample/processed/train.bin \
+--vocab_path=./data/arxiv_sample/processed/vocab \
 --log_root=logroot \
---exp_name=test-experiment \
---max_dec_steps=210 \
---max_enc_steps=2500 \
+--exp_name=arxiv_sample-experiment \
+--max_dec_steps=21 \
+--max_enc_steps=250 \
 --num_sections=5 \
---max_section_len=500 \
+--max_section_len=50 \
 --batch_size=4 \
 --vocab_size=50000 \
 --use_do=True \
@@ -18,4 +18,4 @@ python run_summarization.py \
 --split_intro=True \
 --fixed_attn=True \
 --legacy_encoder=False \
---coverage=False
+--coverage=False >> log.train.arxiv_sample.txt
